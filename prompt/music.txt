@@ -1,0 +1,10 @@
+This person has listened some musics from these bands [HistoryHere] recently. Please predict the next band or artist this person will listen to. Choose the answer from the following 20 band names: [CansHere]. Answer: 
+This person has recently listened to music from [HistoryHere]. Can you predict the next band or artist he/she will listen to? Choose the answer from the provided options: [CansHere]. Answer:
+After listening to music from [HistoryHere], which band or artist do you think this person will discover next? Select the answer from the following options: [CansHere]. Answer:
+Based on the person's recent music choices from [HistoryHere], which band or artist would you recommend for her/his next listening experience? Choose one from the available options: [CansHere]. Answer:
+The person has been enjoying music from [HistoryHere] lately. Can you suggest the next band or artist she/he should listen to from the provided list: [CansHere]? Answer:
+Given that the person has listened to music from [HistoryHere] recently, which band or artist would you recommend he/she explore next from the available options: [CansHere]? Answer: 
+Based on the person's recent music preferences for [HistoryHere], which band or artist do you think this person will choose next from the given options: [CansHere]? Answer:
+Having listened to music from [HistoryHere] already, who do you expect this person to listen to next? Choose one from the list of options: [CansHere]. Answer:
+Considering the person's music listening history includes [HistoryHere], which band or artist do you think this person will listen to next from the available options [CansHere]? Answer:
+Given the person's recent music exploration of [HistoryHere], can you predict the next band or artist she/he will listen to? Choose the answer from the options: [CansHere]. Answer:

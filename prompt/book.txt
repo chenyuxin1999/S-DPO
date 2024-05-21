@@ -1,0 +1,15 @@
+This person has read [HistoryHere] in the previous. Please predict the next book this person will read. Choose the answer from the following 20 book titles: [CansHere]. Answer: 
+This person has read [HistoryHere] in the previous. Given the following 20 book titles: [CansHere], recommend one book for this person to read next. The book title you recommend is: 
+The reading history of this person is: [HistoryHere]. Recommend a next book for this person to read from the following book title set: [CansHere]. The recommendation should contain one book title only. Recommendation:
+Based on the person's previous reading of [HistoryHere], which book from the options [CansHere] do you think he/she will read next?  Answer:
+The person has recently read [HistoryHere]. Can you predict the next book they will read from the provided options [CansHere]?  Answer:
+After reading [HistoryHere], which book do you think the person will choose next from the given options [CansHere]?  Answer:
+Having previously read [HistoryHere], which book from the list [CansHere] do you anticipate the person will read next?  Answer:
+Can you predict the next book this person will read based on his/her previous choice of [HistoryHere]? Choose the answer from the provided options: [CansHere].  Answer:
+The person's reading history includes [HistoryHere]. Now, which book do you expect him/her to read next? Select the answer from the given options: [CansHere].  Answer:
+Given that the person has already read [HistoryHere], which book would you recommend this person to read next from the available choices [CansHere]?  Answer:
+After reading [HistoryHere], the person is presented with the following book options [CansHere]. Can you predict her/his next choice?  Answer:
+The person's reading history contains [HistoryHere]. Please suggest the next book this person is likely to read from the provided options: [CansHere].  Answer:
+Given the previous book choice of [HistoryHere], which book do you anticipate the person will read next? Select the answer from the available options: [CansHere].  Answer:
+The person has recently read [HistoryHere]. Now, which book from the provided options [CansHere] do you predict this person will read next?  Answer:
+Based on the person's previous choice of [HistoryHere], which book would be the most likely next selection from the given options [CansHere]?  Answer:

@@ -1,0 +1,15 @@
+This person has watched [HistoryHere] in the previous. Please predict the next movie this person will watch. Choose the answer from the following 20 movie titles: [CansHere]. Answer: 
+This person has watched [HistoryHere] in the previous. Given the following 10 movie titles: [CansHere], recommend one movie for this person to watch next. The movie title you recommend is: 
+The visit history of this person is: [HistoryHere]. Recommend a next movie for this person to watch from the following movie title set: [CansHere]. The recommendation should contain one movie title only. Recommendation:
+Based on the person's previous viewing of [HistoryHere], which movie from the options [CansHere] do you think he/she will watch next?  Answer:
+The person has recently watched [HistoryHere]. Can you predict the next movie they will watch from the provided options [CansHere]?  Answer:
+After watching [HistoryHere], which movie do you think the person will choose next from the given options [CansHere]?  Answer:
+Having previously viewed [HistoryHere], which movie from the list [CansHere] do you anticipate the person will watch next?  Answer:
+Can you predict the next movie this person will watch based on their previous choice of [HistoryHere]? Choose the answer from the provided options: [CansHere].  Answer:
+The person's viewing history includes [HistoryHere]. Now, which movie do you expect him/her to watch next? Select the answer from the given options: [CansHere].  Answer:
+Given that the person has already seen [HistoryHere], which movie would you recommend this person to watch next from the available choices [CansHere]?  Answer:
+After watching [HistoryHere], the person is presented with the following movie options [CansHere]. Can you predict her/his next choice?  Answer:
+The person's watch history contains [HistoryHere]. Please suggest the next movie this person is likely to watch from the provided options: [CansHere].  Answer:
+Given the previous movie choice of [HistoryHere], which film do you anticipate the person will watch next? Select the answer from the available options: [CansHere].  Answer:
+The person has recently seen [HistoryHere]. Now, which movie from the provided options [CansHere] do you predict this person will watch next?  Answer:
+Based on the person's previous choice of [HistoryHere], which movie would be the most likely next selection from the given options [CansHere]?  Answer:
