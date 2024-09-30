@@ -34,7 +34,7 @@ Our experiments have been tested on **Python 3.9.7 with PyTorch 2.2.2+cu117**.
 
 <p id="Quick-Start"></p> 
 
-### Quick Start
+## ⌛️ Quick Start
 
 We provide a sample data of **LastFM** in ./data folder. Further processing can refer to data_interface.py.
 
