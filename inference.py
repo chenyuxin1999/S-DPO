@@ -33,12 +33,7 @@ def inference( dataset="",
         device_map=device_map,
         # quantization_config=bnb_config,
     )
-    # model.config.use_cache = False
-    # model = prepare_model_for_kbit_training(model)
-    
-    # resume_from_checkpoint = "../dpo_sh/checkpoint/sft_steam-5epoch/final_checkpoint"
-    # resume_from_checkpoint = "./checkpoint/softmax-dpo-lastfm-neg8/final_checkpoint"
-    # resume_from_checkpoint = "../dpo_sh/checkpoint/softmax-dpo-steam-beta0.5/checkpoint-531"
+
     if resume_from_checkpoint != "":
         model = PeftModel.from_pretrained(model, resume_from_checkpoint)
     model.eval()
@@ -65,34 +60,15 @@ def inference( dataset="",
         t = convert_dict_to_prompt(data_point)
         prompt = str(t)
         dic = data_point
-        dic["prompt"] = prompt[:-1] # prompt 末尾不能带空格
+        dic["prompt"] = prompt[:-1]
         return dic
     
-    if dataset == "steam":
-        prompt_path = "../LLaRA_data/prompt/game.txt" if external_prompt_path=="" else external_prompt_path
-        data_files = {
-            "validation": "../data/steam-sft-cans20-new/steam-val.json",
-            "test": "../data/steam-sft-cans20-new/steam-test.json",
-        }
-    elif dataset == "lastfm":
-        prompt_path = "../LLaRA_data/prompt/music.txt" if external_prompt_path=="" else external_prompt_path
-        data_files = {
-            "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
-            "test": "../data/lastfm-sft-cans20/lastfm-test.json",
-        }
-    elif dataset == "goodreads":
-        prompt_path = "../LLaRA_data/prompt/book.txt" if external_prompt_path=="" else external_prompt_path
-        data_files = {
-            "validation": "../data/goodread-sft-cans20/goodread-val.json",
-            "test": "../data/goodread-sft-cans20/goodread-test.json",
-        }
 
-    elif dataset == "ml":
-        prompt_path = "../LLaRA_data/prompt/movie.txt" if external_prompt_path=="" else external_prompt_path
-        data_files = {
-            "validation": "../data/ml-sft-cans20/ml-val.json",
-            "test": "../data/ml-sft-cans20/ml-test.json",
-        }
+    prompt_path = "prompt.txt" if external_prompt_path=="" else external_prompt_path
+    data_files = {
+        "test": "test.json",
+    }
+
 
     data = load_dataset("json", data_files=data_files)
     data.cleanup_cache_files()

@@ -45,8 +45,8 @@ def train(
 
 
     data_files = {
-        "train": "../data/lastfm-sft-cans20/lastfm-train.json",
-        "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
+        "train": "train.json",
+        "validation": "val.json",
     }
 
 

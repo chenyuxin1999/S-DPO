@@ -47,12 +47,9 @@ def evaluate(
     inputs = []
     cans = []
     for elm in val_data:
-        # prompt 里是 target 的
         prompt = elm["prompt"]
-        # print(prompt)
         target = elm["trueSelection"]
         targets.append(target)
-        # print(len(target))
         inputs.append(prompt)
         cans.append(elm["itemList"])
 
