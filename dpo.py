@@ -43,22 +43,12 @@ def train(
     
     os.environ['WANDB_PROJECT'] = wandb_project
 
-    if dataset == "goodreads":
-         data_files = {
-            "train": "../data/goodread-sft-cans20/goodread-train.json",
-            "validation": "../data/goodread-sft-cans20/goodread-val.json",
-        }
-         
-    elif dataset == "lastfm":
-         data_files = {
-            "train": "../data/lastfm-sft-cans20/lastfm-train.json",
-            "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
-        }
-    elif dataset == "ml":
-            data_files = {
-                "train": "../data/ml-sft-cans20/ml-train.json",
-                "validation": "../data/ml-sft-cans20/ml-val.json",
-            }
+
+    data_files = {
+        "train": "../data/lastfm-sft-cans20/lastfm-train.json",
+        "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
+    }
+
 
     def convert_dict_to_prompt(d:dict):
         t = Prompt(prompt_path)
@@ -120,11 +110,10 @@ def train(
     else:
         peft_config = LoraConfig(
         inference_mode=False,
-        r=64,
-        lora_alpha=32,
+        r=32,
+        lora_alpha=8,
         target_modules=['k_proj', 'v_proj', 'q_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
-        lora_dropout=0.05,
-        # bias="none",
+        lora_dropout=0.1,
         task_type="CAUSAL_LM",
         )
 

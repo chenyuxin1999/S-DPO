@@ -8,7 +8,6 @@ from datasets import load_dataset
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 from peft import AutoPeftModelForCausalLM, LoraConfig, get_peft_model, prepare_model_for_kbit_training, TaskType
 from transformers import LlamaForCausalLM, LlamaTokenizer
-# from utils import find_all_linear_names, print_trainable_parameters
 
 from accelerate import Accelerator
 
@@ -40,9 +39,7 @@ def train(
 
 ):
     os.environ['WANDB_PROJECT'] = wandb_project
-    # os.environ['CUDA_VISIBLE_DEVICES'] = "6"
     def convert_dict_to_prompt(d:dict):
-        # print(prompt_path)
         t = Prompt(prompt_path)
         d["historyList"] = d["historyList"].split("::") if isinstance(d["historyList"], str) else d["historyList"]
         t.historyList = d["historyList"]
@@ -61,23 +58,10 @@ def train(
         return dic
 
     
-    if dataset == "ml":
-        data_files = {
-            "train": "../data/ml-sft-cans20/ml-train.json",
-            "validation": "../data/ml-sft-cans20/ml-val.json",
-        }
-
-    elif dataset == "goodreads":
-         data_files = {
-            "train": "../data/goodread-sft-cans20/goodread-train.json",
-            "validation": "../data/goodread-sft-cans20/goodread-val.json",
-        }
-         
-    elif dataset == "lastfm":
-         data_files = {
-            "train": "../data/lastfm-sft-cans20/lastfm-train.json",
-            "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
-        }
+    data_files = {
+        "train": "../data/lastfm-sft-cans20/lastfm-train.json",
+        "validation": "../data/lastfm-sft-cans20/lastfm-val.json",
+    }
     
     data = load_dataset("json", data_files=data_files)
 
@@ -120,11 +104,10 @@ def train(
     # Change the LORA hyperparameters accordingly to fit your use case
     peft_config = LoraConfig(
         inference_mode=False,
-        r=64,
-        lora_alpha=32,
+        r=32,
+        lora_alpha=8,
         target_modules=['k_proj', 'v_proj', 'q_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
-        lora_dropout=0.05,
-        # bias="none",
+        lora_dropout=0.1,
         task_type="CAUSAL_LM",
     )
 
