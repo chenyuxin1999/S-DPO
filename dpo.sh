@@ -8,9 +8,9 @@ torchrun --nproc_per_node 4 --master_port=25642 softmax_dpo.py \
             --learning_rate 1e-5 \
             --eval_step 0.033 \
             --beta 1 \
-            --neg_num 3 \
+            --neg_num 1 \
             --num_train_epochs 3 \
             --logging_dir log_dir \
             --output_dir save_path \
             --wandb_project wandb_proj_name \
-            --wandb_name wandb_run_name > sdpo.log
+            --wandb_name wandb_run_name > dpo.log
