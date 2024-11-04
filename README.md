@@ -40,20 +40,20 @@ We provide a sample data of **LastFM** in ./data folder. Further processing can 
 
 By running the following command, you will start run **Supervised Fine-Tuning** on language model based recommenders.
 ```bash
-python sft.py
+bash sft.sh
 ```
 
 By running the following command, you will start run **Direct Preference Optimization** on language model based recommenders.
 ```bash
-python dpo.py
+bash dpo.sh
 ```
 
 By running the following command, you will start run **Softmax Direct Preference Optimization** on language model based recommenders.
 ```bash
-python softmax_dpo.py
+bash softmax_dpo.sh
 ```
 
 By running the following command, you will start run **Inference** to get the performance metrics.
 ```bash
-python inference.py
+bash inference.sh
 ```
