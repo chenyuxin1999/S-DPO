@@ -1,6 +1,4 @@
-# Put CUDA_VISIBLE_DEVICES=0,1,2,3, etc. before the command to specify the GPU devices
 # Position the number of processes specified after the --nproc_per_node flag
-# The same goes for other training bashes
 torchrun --nproc_per_node 4 --master_port=25642 sft.py \
         --model_name base_model_path  \
         --batch_size 16 \

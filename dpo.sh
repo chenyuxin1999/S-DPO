@@ -1,3 +1,4 @@
+# Position the number of processes specified after the --nproc_per_node flag
 torchrun --nproc_per_node 4 --master_port=25642 softmax_dpo.py \
             --model_name base_model_path  \
             --resume_from_checkpoint ref_model_ckpt_path \
