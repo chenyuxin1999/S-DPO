@@ -1,3 +1,4 @@
+# The number of processes can only be one for inference
 torchrun --nproc_per_node 1 --master_port=25642 \
         inference.py \
         --dataset lastfm \
