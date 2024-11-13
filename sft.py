@@ -104,8 +104,8 @@ def train(
     # Change the LORA hyperparameters accordingly to fit your use case
     peft_config = LoraConfig(
         inference_mode=False,
-        r=32,
-        lora_alpha=8,
+        r=8,
+        lora_alpha=32,
         target_modules=['k_proj', 'v_proj', 'q_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
         lora_dropout=0.1,
         task_type="CAUSAL_LM",
