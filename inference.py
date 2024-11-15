@@ -31,7 +31,7 @@ def inference( dataset="",
     model = LlamaForCausalLM.from_pretrained(
         base_model,
         device_map=device_map,
-        # quantization_config=bnb_config,
+        quantization_config=bnb_config,
     )
 
     if resume_from_checkpoint != "":
