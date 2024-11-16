@@ -18,6 +18,7 @@ import bitsandbytes as bnb
 import fire
 
 
+random.seed(1958)
 def train(
     # path
     output_dir="",
