@@ -8,8 +8,8 @@ torchrun --nproc_per_node 4 --master_port=25642 sft.py \
         --logging_dir log_dir \
         --output_dir save_path \
         --wandb_project dpo-rec-nf4 \
-        --learning_rate 1e-4 \
+        --learning_rate 1e-5 \
         --num_train_epochs 5 \
-        --eval_step 0.05 \
+        --eval_step 0.2 \
         --wandb_project wandb_proj_name \
         --wandb_name wandb_run_name > sft.log

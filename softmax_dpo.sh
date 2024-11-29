@@ -7,7 +7,7 @@ torchrun --nproc_per_node 4 --master_port=25642 softmax_dpo.py \
             --dataset lastfm \
             --prompt_path paompt_path \
             --learning_rate 1e-5 \
-            --eval_step 0.033 \
+            --eval_step 0.1 \
             --beta 1 \
             --neg_num 3 \
             --num_train_epochs 3 \

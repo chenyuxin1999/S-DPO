@@ -2,6 +2,7 @@ import os
 import torch
 import re
 import wandb
+import random
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments,BitsAndBytesConfig
 from datasets import load_dataset
